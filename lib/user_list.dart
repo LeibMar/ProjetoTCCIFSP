@@ -3,6 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'add_client.dart';
+import 'timeline_page.dart';
+import 'login.dart';
+
 
 import 'package:get/get.dart';
 
@@ -123,8 +126,8 @@ class NavAddUser extends StatelessWidget {
         decoration: BoxDecoration (
           borderRadius: BorderRadius.circular(5),
           color: Colors.blue,),
-
-      child: TextButton(
+    child: Column(
+      children:  [ TextButton(
 
       onPressed: () {
         Navigator.push(
@@ -136,6 +139,21 @@ class NavAddUser extends StatelessWidget {
         "Adicionar cliente", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
       ),
     ),
+
+
+         TextButton(
+
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginPage()),
+            );
+          },
+          child: Text(
+            "Login", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          ),
+        ), ]
+      ),
       ),
     ),
     );

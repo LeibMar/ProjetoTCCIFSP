@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'user_list.dart';
+import 'login.dart';
 import 'firebase_options.dart';
 import 'package:responsive_spacing/responsive_spacing.dart';
 import 'package:get/get.dart';
@@ -20,9 +21,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/user_list' ,
+      initialRoute: '/login' ,
       getPages: [
-        GetPage(name: '/user_list', page: () => UserListPage())
+        GetPage(name: '/login', page: () => LoginPage())
       ],
 
 
